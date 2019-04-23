@@ -43,6 +43,16 @@ body{
 	flex-direction:column;
 }
 
+.surferonBeach{
+	position:relative;
+	z-index:1;
+}
+
+.surferonWave{
+	position:relative;
+	z-index:1;
+}
+
 .content-block__shop_text{
 	display: flex;
 	flex-direction: column;
