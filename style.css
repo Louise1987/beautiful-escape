@@ -1,0 +1,97 @@
+body{
+	margin:0;
+	padding:0;
+}
+
+.content-block{
+	width:100%;
+}
+
+.content-block__head{
+	display:flex;
+	flex-direction: row;
+}
+
+.content-block__head-navigation{
+	display: flex;
+	flex-direction:row;
+	justify-content: space-evenly;
+	list-style:none;
+}
+
+.content-block__rotate{
+	display: flex;
+	flex-direction: row;
+}
+
+.content-block__rotate-text{
+	margin-top: 15%;
+}
+
+.content-block__citate-center{
+	margin-left:50%;
+	margin-top:10%;
+}
+
+.content-block__image-video-block{
+	display: flex;
+	flex-direction: row;
+}
+
+.content-block__image-text{
+	display: flex;
+	flex-direction:column;
+}
+
+.content-block__shop_text{
+	display: flex;
+	flex-direction: column;
+	margin-left:50%;
+}
+
+.content-block__product_list{
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	justify-content: space-evenly;
+	margin-bottom: 5%;
+}
+
+.content-button__toggle{
+	margin-left: 50%;
+	margin-bottom:10%;
+}
+
+.content-block__surf-training{
+	display: flex;
+	flex-direction: row;
+}
+
+.content-block__point-break{
+	display: flex;
+	flex-direction: row;
+	margin-top:10%;
+}
+
+.content-block__point-break_section{
+	display: flex;
+	flex-direction: row;
+}
+
+.content-block__point-break_text{
+	display: flex;
+	flex-direction: column;
+}
+
+.content-block__form{
+	margin-left:50%;
+}
+
+.content-block__camp{
+	display: flex;
+	flex-direction: row;
+	margin-top:10%;
+}
+
+
+
