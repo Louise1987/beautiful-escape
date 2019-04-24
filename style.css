@@ -3,42 +3,48 @@ body{
 	padding:0;
 }
 
-.content-block{
+.c-section{
 	width:100%;
 }
 
-.content-block__head{
+.c-header{
 	display:flex;
-	flex-direction: row;
+	flex-direction: column;
 }
 
-.content-block__head-navigation{
+.c-header__menu{
+	width:100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.c-navigation{
 	display: flex;
 	flex-direction:row;
 	justify-content: space-evenly;
 	list-style:none;
 }
 
-.content-block__rotate{
+.c-rotate{
 	display: flex;
 	flex-direction: row;
 }
 
-.content-block__rotate-text{
+.c-rotate__text{
 	margin-top: 15%;
 }
 
-.content-block__citate-center{
+.c-citate__text{
 	margin-left:50%;
 	margin-top:10%;
 }
 
-.content-block__image-video_block{
+.c-image__video{
 	display: flex;
 	flex-direction: row;
 }
 
-.content-block__image-text{
+.c-image__video-section{
 	display: flex;
 	flex-direction:column;
 }
@@ -53,14 +59,14 @@ body{
 	z-index:1;
 }
 
-.content-block__shop_text{
+.c-shop__text{
 	display: flex;
 	flex-direction: column;
 	margin-left:50%;
 	margin-top: 10%;
 }
 
-.content-block__product_list{
+.c-product__list{
 	display: flex;
 	flex-direction: row;
 	list-style: none;
@@ -73,32 +79,27 @@ body{
 	margin-bottom:10%;
 }
 
-.content-block__surf-training{
+.c-section__surf-training{
 	display: flex;
 	flex-direction: row;
 }
 
-.content-block__point-break{
+.c-section__point-break{
 	display: flex;
 	flex-direction: row;
 	margin-top:10%;
 }
 
-.content-block__point-break_section{
-	display: flex;
-	flex-direction: row;
-}
-
-.content-block__point-break_text{
+.c-point-break__text{
 	display: flex;
 	flex-direction: column;
 }
 
-.content-block__form{
+.c-form{
 	margin-left:50%;
 }
 
-.content-block__camp{
+.c-camp{
 	display: flex;
 	flex-direction: row;
 	margin-top:10%;
