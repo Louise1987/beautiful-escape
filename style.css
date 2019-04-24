@@ -13,7 +13,6 @@ body{
 }
 
 .c-header__menu{
-	width:100%;
 	display: flex;
 	flex-direction: column;
 }
@@ -82,7 +81,12 @@ body{
 .c-surf-training{
 	display: flex;
 	flex-direction: row;
-	margin-left: 25%;
+	text-align: right;
+	margin: 5% 20% 20% 20%;
+}
+
+.c-text__surf-training{
+	text-align: right;
 }
 
 .c-surf-training--image{
@@ -92,11 +96,11 @@ body{
 .c-point-break{
 	display: flex;
 	flex-direction: row;
-	margin-top:10%;
+	margin: 15% 20% 20% 20%;
+	text-align: right;
 }
 
 .c-point-break--image{
-	padding-left: 25%;
 	margin:20px;
 }
 
@@ -106,13 +110,17 @@ body{
 }
 
 .c-form{
-	margin-left:50%;
+	text-align:center;
+	margin-bottom:10%;
 }
 
 .c-camp{
 	display: flex;
 	flex-direction: row;
-	margin-top:10%;
+}
+
+.c-camp-flex{
+	margin:10%;
 }
 
 /* Döljer och placeras sist för ITCSS */
