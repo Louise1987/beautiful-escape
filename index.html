@@ -5,7 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>Beautiful escapes</title>
+	<script src="https://unpkg.com/react@16.4.1/umd/react.production.min.js"></script>
+	<script src="https://unpkg.com/react-dom@16.4.1/umd/react-dom.production.min.js"></script>
+	
+
 </head>
 <body>
 
@@ -25,11 +28,15 @@
 				<div class="c-rotate">
 				<div class="c-rotate__text">
 					<h1 class="c-rotate__title">Beautiful Escape</h1>
-					<p class="c-rotate__text-inspiring">Text</p>
+					<p class="c-rotate__text-inspiring">One of the greatest things about the sport of surfing is that you
+						need only three things: your body a surfboard, and a wave.
+					</p>
 				</div>
 
 				<div class="c-rotate__image">
-					<img src="img/vawe.jpg" alt="">
+					<img class="imageSlide" src="img/vawe.jpg" alt="" style="max-width:500px">
+					<img class="imageSlide" src="img/surferonwave.jpg" alt="" style="max-width:500px">
+					<img class="imageSlide" src="img/surferonwave2.jpg" alt="" style="max-width:500px">
 				</div>
 			</div>
 
@@ -59,18 +66,37 @@
 				<h2 class="c-title__shop">Surfboards</h2>
 			</div>
 			<div class="c-product">
-				<ul class="c-product__list">
-					<li class="c-product__background"><img src="img/surfboard4.png" alt=""></li>
-					<li class="c-product__background"><img src="img/surfboard5.png" alt=""></li>
-					<li class="c-product__background"><img src="img/surfboard6.png" alt=""></li>
-					<!-- <li><img src="img/surfboard1.jpg"></li>
-					<li><img src="img/surfboard2.jpg"></li>
-					<li><img src="img/surfboard3.jpg"></li> Show/Hide-->
-				</ul>
+				<div class="c-product__slide">
+					<ul class="c-product__list fade">
+						<li class="c-product__background"><img src="img/surfboard2.png" alt=""></li>
+						<li class="c-product__background"><img src="img/surfboard3.png" alt=""></li>
+						<li class="c-product__background"><img src="img/surfboard1.png" alt=""></li>
+					</ul>
+				</div>
+				<div class="c-product__slide">
+						<ul class="c-product__list fade">
+							<li class="c-product__background"><img src="img/surfboard4.png" alt=""></li>
+							<li class="c-product__background"><img src="img/surfboard5.png" alt=""></li>
+							<li class="c-product__background"><img src="img/surfboard6.png" alt=""></li> 
+						</ul>
+				</div>
+				<div id="c-product__toggle">
+					<!-- <ul class="c-product__list fade">
+						<li class="c-product__background"><img src="img/surfboard4.png" alt=""></li>
+						<li class="c-product__background"><img src="img/surfboard5.png" alt=""></li>
+						<li class="c-product__background"><img src="img/surfboard6.png" alt=""></li> 
+					</ul> -->
+				</div>
+
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
 				<!-- Toggle funktion -->
-				<button class="content-button__toggle">Show All</button>
+				<button class="content-button__toggle" onclick="toggleFunction()">Show/Hide</button>
+	
 			</div>
+			
 		</div>
+
 			<div class="c-surf-training">
 			<div class="c-text__surf-training">
 					<h2 class="c-title__surf-training">Surf Training</h2>
@@ -124,8 +150,57 @@
 								<li>Boards</li>
 							</ul>
 				</div>
-
+			
 
 	</div>
+
+	<script type="text/javascript">
+
+	// slide produkt fält
+	var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+	showSlides(slideIndex += n);
+}
+
+function showSlides(n){
+	var i;
+	var slides = document.getElementsByClassName("c-product__slide");
+	if (n > slides.length) {slideIndex = 1}
+	if (n < 1) {slideIndex = slides.length}
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";
+	}
+	slides[slideIndex-1].style.display = "block";  
+}
+	// toggle funktion för hide show surfbrädor
+function toggleFunction(){
+	var x = document.getElementsByClassName("c-product__toggle");
+	if (x.style.display === "none") {
+		x.style.display = "block";
+	}else{
+		x.style.display = "none";
+	}
+}
+
+// header automatic slider
+var headerSlide = 0;
+carousel();
+
+function carousel(){
+	var i;
+	var y = document.getElementsByClassName("imageSlide");
+	for (i = 0; i < y.length; i++){
+		y[i].style.display = "none";
+	}
+	headerSlide++;
+	if (headerSlide > y.length) {headerSlide = 1}
+	y[headerSlide-1].style.display = "block";
+	setTimeout(carousel, 2000);
+}
+
+</script>
+	<!-- <script src="script.js"></script> -->
 </body>
 </html>

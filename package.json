@@ -1,0 +1,23 @@
+{
+  "name": "beautiful-escape",
+  "version": "1.0.0",
+  "description": "front-end",
+  "main": "script.js",
+  "scripts": {
+    "start": "node your-script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Louise1987/beautiful-escape.git"
+  },
+  "keywords": [
+    "beautiful",
+    "escape"
+  ],
+  "author": "Louise",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Louise1987/beautiful-escape/issues"
+  },
+  "homepage": "https://github.com/Louise1987/beautiful-escape#readme"
+}
