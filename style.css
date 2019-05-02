@@ -66,7 +66,6 @@ body{
 
 .c-citate__text{
 	text-align: center;
-
 }
 
 .c-rotate__text-inspiring{
@@ -74,9 +73,12 @@ body{
 	width:200%;
 }
 
+.c-navigation{
+	margin:10px;
+	height: 20px;
+}
 
 a.control_prev, a.control_next {
-  position: absolute;
   top: 40%;
   z-index: 999;
   display: block;
