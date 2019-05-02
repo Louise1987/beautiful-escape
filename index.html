@@ -7,21 +7,21 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://unpkg.com/react@16.4.1/umd/react.production.min.js"></script>
 	<script src="https://unpkg.com/react-dom@16.4.1/umd/react-dom.production.min.js"></script>
-	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
 </head>
 <body>
 
 
-	<div class="c-section">
+	<div class="o-width-limiter">
 		<div class="c-header">
 	
 			<div class="c-header__menu">
 				<ul class="c-navigation">
-					<li>Stories</li>
-					<li>Events</li>
-					<li>Places</li>
-					<li>Boards</li>
+					<li><a href="stories">Stories</a></li>
+					<li><a href="events">Events</a></li>
+					<li><a href="places">Places</a></li>
+					<li><a href="#boards">Boards</a></li>
 				</ul>
 			</div>
 
@@ -31,13 +31,17 @@
 					<p class="c-rotate__text-inspiring">One of the greatest things about the sport of surfing is that you
 						need only three things: your body a surfboard, and a wave.
 					</p>
+					<a href="#" class="control_next">></a>
+  				<a href="#" class="control_prev"><</a>
 				</div>
 
-				<div class="c-rotate__image">
-					<img class="imageSlide" src="img/vawe.jpg" alt="" style="max-width:500px">
-					<img class="imageSlide" src="img/surferonwave.jpg" alt="" style="max-width:500px">
-					<img class="imageSlide" src="img/surferonwave2.jpg" alt="" style="max-width:500px">
-				</div>
+				<div class="c-rotate__slider">
+					<ul class="c-rotate__slider-image">
+						<li><img class="imageSlide" src="img/vawe.jpg" alt=""></li>
+						<li><img class="imageSlide" src="img/surferonwave.jpg" alt=""></li>
+						<li><img class="imageSlide" src="img/surferonwave2.jpg" alt=""></li>
+					</ul>
+			</div>
 			</div>
 
 		</div>
@@ -49,21 +53,23 @@
 				 John McCarthy</p>
 		</div>
 
-		<div class="c-image__video">
-			<div class="c-image__video-section">
-				<img src="img/surfer.jpg" alt="" class="surferonBeach">
-				<p class="c-text-inspiring__surfer">By better understanding the various aspects<br>
-					of surfing,	you will improve faster and have more<br>
-					 fun in the water.</p>
-				<p class="c-text__read-more" id="expandable-section-1" tabindex="-1">Read More</p>
+		<div class="c-image__section">
+			<div class="c-image__video">
+				<div class="c-image__video-section">
+					<img src="img/surfer.jpg" alt="" class="surferonBeach">
+					<p class="c-text-inspiring__surfer">By better understanding the various aspects<br>
+						of surfing,	you will improve faster and have more<br>
+						 fun in the water.</p>
+				</div>
+				<img src="img/surferonwave.jpg" alt="" class="surferonWave">
 			</div>
-			<img src="img/surferonwave.jpg" alt="" class="surferonWave">
+			<p class="c-text__read-more" id="expandable-section-1" tabindex="-1">Read More</p>
 		</div>
 
 		<div class="c-shop">
 			<div class="c-shop__text">
 				<p>Shop</p>
-				<h2 class="c-title__shop">Surfboards</h2>
+				<h2 class="c-title__shop"><a id=boards></a>Surfboards</h2>
 			</div>
 			<div class="c-product">
 				<div class="c-product__slide">
@@ -80,18 +86,18 @@
 							<li class="c-product__background"><img src="img/surfboard6.png" alt=""></li> 
 						</ul>
 				</div>
-				<div id="c-product__toggle">
-					<!-- <ul class="c-product__list fade">
+				
+					<ul class="c-product__toggle">
 						<li class="c-product__background"><img src="img/surfboard4.png" alt=""></li>
 						<li class="c-product__background"><img src="img/surfboard5.png" alt=""></li>
 						<li class="c-product__background"><img src="img/surfboard6.png" alt=""></li> 
-					</ul> -->
-				</div>
+					</ul>
+			
 
 				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 				<a class="next" onclick="plusSlides(1)">&#10095;</a>
 				<!-- Toggle funktion -->
-				<button class="content-button__toggle" onclick="toggleFunction()">Show/Hide</button>
+				<a class="content-button__toggle" onclick="toggleFunction()">Show/Hide</a>
 	
 			</div>
 			
@@ -102,11 +108,11 @@
 					<h2 class="c-title__surf-training">Surf Training</h2>
 				<p class="c-text-inspiring__surf-training">By better understanding the varius aspects of surfing,<br>
 					you will improve faster and have more fun in the water.</p>
-				<p class="c-read-more" id="expandable-section-1" tabindex="-1">Read More</p>
 			</div>
-				<div class="c-surf-training--image">
-					<img src="img/surferonwave2.jpg" alt="">
-				</div>
+				<!-- <div class="c-surf-training--image"> -->
+					<img src="img/surferonwave2.jpg" alt="" class="c-surf-training--image">
+				<!-- </div> -->
+				<p class="c-read-more" id="expandable-section-1" tabindex="-1">Read More</p>
 			</div>
 
 			<div class="c-point-break">
@@ -174,31 +180,81 @@ function showSlides(n){
 	}
 	slides[slideIndex-1].style.display = "block";  
 }
+
 	// toggle funktion för hide show surfbrädor
 function toggleFunction(){
 	var x = document.getElementsByClassName("c-product__toggle");
-	if (x.style.display === "none") {
-		x.style.display = "block";
-	}else{
-		x.style.display = "none";
+	console.log(x);
+	for (let index = 0; index < x.length; index++) {
+		const element = x[index];
+		if (x[index].style.display === "flex") {
+			x[index].style.display = "none";
+		}else{
+			x[index].style.display = "flex";
+		}
 	}
+
 }
+
+// header slider 
+
+jQuery(document).ready(function ($) {
+
+var slideCount = $('c-rotate__slider ul li').length;
+var slideWidth = $('c-rotate__slider ul li').width();
+var slideHeight = $('c-rotate__slider ul li').height();
+var sliderUlWidth = slideCount * slideWidth;
+
+$('c-rotate__slider').css({ width: slideWidth, height: slideHeight });
+
+$('c-rotate__slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+
+	$('c-rotate__slider ul li:last-child').prependTo('c-rotate__slider ul');
+
+	function moveLeft() {
+			$('c-rotate__slider ul').animate({
+					left: + slideWidth
+			}, 200, function () {
+					$('c-rotate__slider ul li:last-child').prependTo('c-rotate__slider ul');
+					$('c-rotate__slider ul').css('left', '');
+			});
+	};
+
+	function moveRight() {
+			$('c-rotate__slider ul').animate({
+					left: - slideWidth
+			}, 200, function () {
+					$('c-rotate__slider ul li:first-child').appendTo('c-rotate__slider ul');
+					$('c-rotate__slider ul').css('left', '');
+			});
+	};
+
+	$('a.control_prev').click(function () {
+			moveLeft();
+	});
+
+	$('a.control_next').click(function () {
+			moveRight();
+	});
+
+});    
+
 
 // header automatic slider
-var headerSlide = 0;
-carousel();
+// var headerSlide = 0;
+// carousel();
 
-function carousel(){
-	var i;
-	var y = document.getElementsByClassName("imageSlide");
-	for (i = 0; i < y.length; i++){
-		y[i].style.display = "none";
-	}
-	headerSlide++;
-	if (headerSlide > y.length) {headerSlide = 1}
-	y[headerSlide-1].style.display = "block";
-	setTimeout(carousel, 2000);
-}
+// function carousel(){
+// 	var i;
+// 	var y = document.getElementsByClassName("imageSlide");
+// 	for (i = 0; i < y.length; i++){
+// 		y[i].style.display = "none";
+// 	}
+// 	headerSlide++;
+// 	if (headerSlide > y.length) {headerSlide = 1}
+// 	y[headerSlide-1].style.display = "block";
+// 	setTimeout(carousel, 2000);
+// }
 
 </script>
 	<!-- <script src="script.js"></script> -->

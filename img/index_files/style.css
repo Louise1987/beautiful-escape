@@ -46,18 +46,24 @@ body{
 }
 
 .c-rotate__slider{
-	overflow: hidden;
-}
-
-.c-rotate__slider-image{
-	display: flex;
-	flex-direction:row;
-	list-style: none;
+	width: 300px;
+  height: 500px;
+	overflow-x:scroll;
 }
 
 .imageSlide{
 	width:900px;
 	height:600px;
+}
+
+#slide-0{
+	background-image: url("img/vawe.jpg");
+}
+#slide-1{
+	background-image: url("img/surferonwave.jpg");
+}
+#slide-2{
+	background-image: url("img/surferonwave2.jpg");
 }
 
 .c-citate{
@@ -72,38 +78,6 @@ body{
 .c-rotate__text-inspiring{
 	color:#8d918f;
 	width:200%;
-}
-
-
-a.control_prev, a.control_next {
-  position: absolute;
-  top: 40%;
-  z-index: 999;
-  display: block;
-  padding: 4% 3%;
-  width: auto;
-  height: auto;
-  color: #000000;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
-  opacity: 0.8;
-  cursor: pointer;
-}
-
-a.control_prev:hover, 
-a.control_next:hover {
-  opacity: 1;
-  -webkit-transition: all 0.2s ease;
-}
-
-a.control_prev {
-  border-radius: 0 2px 2px 0;
-}
-
-a.control_next {
-  right: 0;
-  border-radius: 2px 0 0 2px;
 }
 
 .c-image__section{
