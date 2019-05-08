@@ -28,36 +28,66 @@ body{
 	list-style:none;
 }
 
-.c-rotate{
-	display: flex;
-	flex-direction: row;
-	height: 600px;
-	width:100%;
+.c-rotate__carousel{
+	/* display: flex;
+	flex-direction: row; */
+	/* margin:10%; */
 }
 
 .c-rotate__text{
-	margin-top: 25%;
-	position: relative;
-	left:5%;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 300px;
+	transform: translateY(-50%);
+	text-align: left;
 }
 
 .c-rotate__title{
 	width:200%;
+	position: relative;
 }
 
 .c-rotate__slider{
-	overflow: hidden;
+	position:relative;
+	overflow:hidden;
+	margin: 0 auto;
 }
+	
 
 .c-rotate__slider-image{
-	display: flex;
-	flex-direction:row;
 	list-style: none;
+	position: relative;
+	height:300px;
+	margin:0;
+	padding:0;
+}
+
+.c-rotate__slider-image li {
+	position: relative;
+	display: flex;
+	float:left;
+	margin:0;
+	padding:0;
+	width:900px;
+	height:500px;
+	justify-content: flex-end;
+	align-items: center;
 }
 
 .imageSlide{
-	width:900px;
-	height:600px;
+	height: auto;
+ 	width: calc(100% - 200px);
+}
+
+.c-rotate__navigate{
+	display: flex;
+	flex-direction:row;
+	margin-left:50px;
+	margin-bottom:50px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
 }
 
 .c-citate{
@@ -70,27 +100,22 @@ body{
 
 .c-rotate__text-inspiring{
 	color:#8d918f;
-	width:200%;
 }
 
-.c-navigation{
-	margin:10px;
-	height: 20px;
-}
-
-a.control_prev, a.control_next {
+a.control_prev, a.control_next, .numberText {
   top: 40%;
   z-index: 999;
   display: block;
   padding: 4% 3%;
   width: auto;
   height: auto;
-  color: #000000;
+  color:#8d918f;
   text-decoration: none;
   font-weight: 600;
   font-size: 18px;
   opacity: 0.8;
-  cursor: pointer;
+	cursor: pointer;
+	margin: 0 10px;
 }
 
 a.control_prev:hover, 
@@ -124,12 +149,10 @@ a.control_next {
 }
 
 .surferonBeach{
-	position: inherit;;
+	position: inherit;
 	top:80%;
 	left:10%;
 	z-index:1;
-	width:90%;
-	height: 70%;
 }
 
 .surferonWave{
@@ -137,7 +160,6 @@ a.control_next {
 	top:160%;
 	left:50%;
 	z-index:2;
-	height: 50%;
 }
 
 .c-text-inspiring__surfer{
