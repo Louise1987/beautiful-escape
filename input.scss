@@ -1,0 +1,17 @@
+@import "variables.scss";
+
+.head{
+	color:$red;
+	@include test(#000);
+
+
+	.body{
+		color:$red;
+		@include test($red);
+	}
+
+	// .img{
+	// 	object-fit: none;
+	// 	@include test();
+	// }
+}

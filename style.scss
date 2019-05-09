@@ -1,0 +1,348 @@
+@import "variables.scss";
+
+body{
+	margin:0;
+	padding:0;
+}
+
+.o-width-limiter{
+	padding: 50px;
+	max-width: 900px;
+	margin: auto;
+}
+
+.c-header {
+	display:flex;
+	flex-direction: column;
+}
+
+.c-header__menu{
+	display: flex;
+	flex-direction: column;
+	width:100%;
+}
+
+.c-navigation{
+	display: flex;
+	flex-direction:row;
+	justify-content: space-evenly;
+	list-style:none;
+	margin-left: 20%;
+}
+
+.c-rotate__text{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 300px;
+	transform: translateY(-50%);
+	text-align: left;
+}
+
+.c-rotate__title{
+	width:200%;
+	position: relative;
+}
+
+.c-rotate__slider{
+	position:relative;
+	overflow:hidden;
+	margin: 0 auto;
+
+	&--product {
+		.c-rotate__navigate {
+			position: relative;
+		}
+	}
+}
+	
+.c-rotate__slider-image{
+	list-style: none;
+	position: relative;
+	height:300px;
+	margin:0;
+	padding:0;
+}
+
+.c-rotate__slider-image li {
+	position: relative;
+	display: flex;
+	float:left;
+	margin:0;
+	padding:0;
+	width:900px;
+	height:500px;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.imageSlide{
+	height: auto;
+ 	width: calc(100% - 200px);
+}
+
+.c-rotate__navigate{
+	display: flex;
+	flex-direction:row;
+	margin-left:50px;
+	margin-bottom:50px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	white-space: nowrap;
+}
+
+.c-citate{
+	margin:20%;
+}
+
+.c-citate__text{
+	text-align: center;
+}
+
+.c-rotate__text-inspiring{
+	color:$gray;
+}
+
+a.control_prev, a.control_next, .numberText {
+  top: 40%;
+  z-index: 999;
+  display: block;
+  width: auto;
+  height: auto;
+  color:$gray;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+	cursor: pointer;
+	margin: 0 10px;
+}
+
+a.control_prev:hover, 
+a.control_next:hover {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+}
+
+a.control_prev {
+  border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+.numberTex{
+	white-space: nowrap;
+}
+
+.c-image__video{
+	display: flex;
+	flex-direction: row;
+}
+
+.c-image__video-section{
+	display: flex;
+	flex-direction:column;
+}
+
+.surferonBeach{
+	position: inherit;
+	top:80%;
+	left:10%;
+	z-index:1;
+}
+
+.surferonWave{
+	position:relative;
+	top:40px;
+	z-index:2;
+	// overflow: hidden;
+	transform: translateX(-10%);
+}
+
+.c-text-inspiring__surfer{
+	text-align: center;
+	margin: 30px 90px 60px 10px;
+}
+
+.c-text__read-more{
+	text-align: center;
+	margin:10%;
+}
+
+.c-shop__text{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.c-product{
+	max-width: 1000px;
+  position: relative;
+  margin: auto
+}
+
+.c-product__slide{
+		display:all;
+}
+
+.c-product__toggle{
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	justify-content: space-evenly;
+	margin-bottom:20%;
+	padding: 0;
+	margin: 0 15px;
+	display: none;
+}
+
+.c-product__list{
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	justify-content: space-evenly;
+	margin-bottom:20%;
+	padding: 0;
+	margin: 0 15px;
+}
+
+.c-product__background {
+	position: relative;
+	text-align: center;
+	width: 33%;
+	margin: 0 15px;
+	padding-bottom: 15px;
+	cursor: pointer;
+}
+.c-product__background img {
+	position: relative;
+	z-index: 1;
+}
+.c-product__background::before{
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgb(137, 140, 146, 0.2);
+	width:100%;
+	height:70%;
+	z-index: 0;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.content-button__toggle{
+	margin-left: 50%;
+	margin-bottom:10%;
+}
+
+.c-surf-training{
+	display: flex;
+	flex-direction: row;
+	margin-left: 5%;
+}
+
+.c-text__surf-training{
+	text-align: center;
+	margin-top: 15%;
+}
+
+.c-surf-training--image{
+	padding-left: 5%;
+	margin-top:10%;
+	width:100%;
+	height: 100%;
+}
+
+.c-point-break{
+	display: flex;
+	flex-direction: row;
+	margin: 15% 10% 20% 20%;
+	text-align: center;
+}
+
+.c-point-break--image{
+	margin:20px;
+}
+
+.c-point-break__flex{
+	margin-top:20%;
+}
+
+.c-point-break__text{
+	display: flex;
+	flex-direction: column;
+}
+
+.c-form{
+	text-align:center;
+	margin-bottom:10%;
+}
+
+.c-camp{
+	display: flex;
+	flex-direction: row;
+}
+
+.c-camp-flex{
+	margin:5%;
+}
+
+/* Döljer och placeras sist för ITCSS */
+.visually-hidden{
+	position: absolute !important;
+	height: 1px; width: 1px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+
