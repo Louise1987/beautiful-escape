@@ -7,26 +7,28 @@ body {
 .o-width-limiter {
   padding: 50px;
   max-width: 900px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .c-header {
-  display: flex;
-  flex-direction: column;
+  padding: 0;
 }
 
 .c-header__menu {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: calc(100% - 200px);
+  margin-left: auto;
 }
 
 .c-navigation {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
   list-style: none;
-  margin-left: 20%;
+  padding: 0;
+}
+
+.c-navigation li {
+  padding-right: 30px;
 }
 
 .c-rotate__text {
@@ -36,6 +38,7 @@ body {
   width: 300px;
   transform: translateY(-50%);
   text-align: left;
+  margin-left: 5%;
 }
 
 .c-rotate__title {
@@ -80,6 +83,7 @@ body {
 .c-rotate__navigate {
   display: flex;
   flex-direction: row;
+  align-items: center;
   margin-left: 50px;
   margin-bottom: 50px;
   position: absolute;
@@ -101,11 +105,8 @@ body {
 }
 
 a.control_prev, a.control_next, .numberText {
-  top: 40%;
   z-index: 999;
   display: block;
-  width: auto;
-  height: auto;
   color: #8d918f;
   text-decoration: none;
   font-weight: 600;
@@ -160,12 +161,17 @@ a.control_next {
 
 .c-text-inspiring__surfer {
   text-align: center;
-  margin: 30px 90px 60px 10px;
 }
 
 .c-text__read-more {
   text-align: center;
-  margin: 10%;
+  margin-top: 10%;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.position-left {
+  margin-right: 100%;
 }
 
 .c-shop__text {
@@ -201,17 +207,40 @@ a.control_next {
   list-style: none;
   justify-content: space-evenly;
   margin-bottom: 20%;
-  padding: 0;
-  margin: 0 15px;
+  margin-bottom: 10%;
 }
 
 .c-product__background {
   position: relative;
   text-align: center;
   width: 33%;
-  margin: 0 15px;
   padding-bottom: 15px;
   cursor: pointer;
+  z-index: 1;
+}
+
+.c-product__background-text {
+  padding-top: 15%;
+  color: rgba(51, 51, 51, 0.5);
+  z-index: 2;
+  transform: translate(-30%, 6%);
+  margin-top: 5%;
+}
+
+.c-product__background-center {
+  text-align: center;
+  width: 100%;
+  margin: 10%;
+}
+
+.c-product__background-price {
+  color: #ce60a8;
+}
+
+.c-product__button {
+  padding: 0;
+  border: none;
+  background: none;
 }
 
 .c-product__background img {
@@ -262,13 +291,13 @@ a.control_next {
   top: 50%;
   width: auto;
   padding: 16px;
-  margin-top: -22px;
   color: black;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  padding: inherit;
 }
 
 /* Position the "next button" to the right */
@@ -283,8 +312,9 @@ a.control_next {
 }
 
 .content-button__toggle {
-  margin-left: 50%;
-  margin-bottom: 10%;
+  margin-left: 40%;
+  border: none;
+  background: none;
 }
 
 .c-surf-training {
@@ -294,35 +324,33 @@ a.control_next {
 }
 
 .c-text__surf-training {
-  text-align: center;
   margin-top: 15%;
+  text-align: justify;
 }
 
 .c-surf-training--image {
   padding-left: 5%;
   margin-top: 10%;
-  width: 100%;
-  height: 100%;
 }
 
 .c-point-break {
   display: flex;
   flex-direction: row;
-  margin: 15% 10% 20% 20%;
-  text-align: center;
+  margin: 10%;
 }
 
 .c-point-break--image {
-  margin: 20px;
+  margin: 10px;
 }
 
 .c-point-break__flex {
-  margin-top: 20%;
+  margin-top: 10%;
 }
 
 .c-point-break__text {
   display: flex;
   flex-direction: column;
+  text-align: justify;
 }
 
 .c-form {
@@ -337,6 +365,17 @@ a.control_next {
 
 .c-camp-flex {
   margin: 5%;
+}
+
+.c-camp__text {
+  width: 50%;
+  margin-left: 8%;
+}
+
+.c-footer__menu {
+  margin-left: 30%;
+  margin-top: 10%;
+  width: 500px;
 }
 
 /* Döljer och placeras sist för ITCSS */
