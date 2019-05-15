@@ -41,6 +41,12 @@ body {
   margin-left: 5%;
 }
 
+.c-rotate__title-your,
+.c-shop__text-shop {
+  color: #72b2f1;
+  text-transform: uppercase;
+}
+
 .c-rotate__title {
   width: 200%;
   position: relative;
@@ -93,7 +99,7 @@ body {
 }
 
 .c-citate {
-  margin: 20%;
+  margin: 10%;
 }
 
 .c-citate__text {
@@ -161,6 +167,10 @@ a.control_next {
 
 .c-text-inspiring__surfer {
   text-align: center;
+}
+
+.c-title__surf-training::first-letter {
+  text-decoration: underline #5da8ef;
 }
 
 .c-text__read-more {
@@ -312,7 +322,8 @@ a.control_next {
 }
 
 .content-button__toggle {
-  margin-left: 40%;
+  margin-left: 45%;
+  margin-top: 10%;
   border: none;
   background: none;
 }
@@ -320,7 +331,10 @@ a.control_next {
 .c-surf-training {
   display: flex;
   flex-direction: row;
-  margin-left: 5%;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  margin-bottom: 10%;
 }
 
 .c-text__surf-training {
@@ -336,7 +350,13 @@ a.control_next {
 .c-point-break {
   display: flex;
   flex-direction: row;
-  margin: 10%;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.c-point-break__title::first-letter {
+  text-decoration: underline #5da8ef;
 }
 
 .c-point-break--image {
@@ -355,7 +375,23 @@ a.control_next {
 
 .c-form {
   text-align: center;
-  margin-bottom: 10%;
+  margin: 10%;
+}
+
+.c-form__input {
+  display: flex;
+  justify-content: center;
+}
+
+.join-block__input {
+  border: none;
+  background: #f5f5f5;
+  padding-left: 15px;
+  width: 60%;
+}
+
+.o-join__button {
+  background: #5da8ef;
 }
 
 .c-camp {
