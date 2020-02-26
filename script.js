@@ -7,8 +7,13 @@ $('.content-button__toggle').click(function() {
 
 	if($(this).hasClass('open')) {
 		$(this).text('Hide all');
+		$(".prev").hide();
+		$(".next").hide();
 	} else {
 		$(this).text('Show all');
+		$(".prev").show();
+		$(".next").show();	
+
 	}
 
 
