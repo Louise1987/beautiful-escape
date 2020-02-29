@@ -9,6 +9,8 @@ $('.content-button__toggle').click(function() {
 		$(this).text('Hide all');
 	} else {
 		$(this).text('Show all');
+		$(".prev").hide();
+		$(".next").hide();
 	}
 
 
