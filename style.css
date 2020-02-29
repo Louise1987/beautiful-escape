@@ -39,6 +39,7 @@ body {
   transform: translateY(-50%);
   text-align: left;
   margin-left: 5%;
+  /*position: sticky;*/
 }
 
 .c-rotate__title-your,
