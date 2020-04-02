@@ -63,6 +63,8 @@ $('.c-rotate__slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth }
 
 $('.c-rotate__slider ul li:last-child').prependTo('.c-rotate__slider ul');
 
+$('.c-rotate__text').css('position:sticky');
+
 function moveLeft() {
 		$('.c-rotate__slider ul').animate({
 				left: + slideWidth,
